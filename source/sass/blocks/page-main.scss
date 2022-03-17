@@ -1,0 +1,30 @@
+.page-main--catalog .content-wrapper {
+  display: grid;
+  grid-template-columns: 250px auto;
+  grid-gap: 49px;
+  padding-top: 80px;
+}
+
+.page-main--inner .content-wrapper {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+@media (max-width: $tablet-width) {
+  .page-main--catalog .content-wrapper {
+    grid-template-columns: 1fr;
+    padding-top: 34px;
+  }
+
+  .page-main--catalog .swiper {
+    padding-bottom: 164px;
+  }
+}
+
+
+@media (max-width: $mobile-width) {
+  .page-main--catalog .content-wrapper {
+    padding-top: 25px;
+    grid-gap: 39px;
+  }
+}

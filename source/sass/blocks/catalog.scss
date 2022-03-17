@@ -1,0 +1,135 @@
+.catalog {
+  padding: 120px 0 128px 0;
+}
+
+.catalog .section-title {
+  margin-bottom: 25px;
+}
+
+.catalog .site-link {
+  line-height: 16px;
+}
+
+
+.catalog .swiper {
+  margin-top: 60px;
+  overflow-y: visible;
+  overflow-x: clip;
+}
+
+.catalog .swiper-button-prev,
+.catalog .swiper-button-next {
+  width: 29px;
+  height: 9px;
+  top: -82px;
+}
+
+.catalog .swiper-button-prev {
+  justify-content: flex-start;
+  left: 0;
+}
+
+.catalog .swiper-button-next {
+  justify-content: flex-end;
+  right: 0;
+}
+
+.catalog .swiper-button-next::after,
+.catalog .swiper-button-prev::after {
+  font-size: 10px;
+  color: $medium-wood;
+}
+
+.catalog .swiper-button-next::before,
+.catalog .swiper-button-prev::before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 28px;
+  height: 1px;
+  background-color: $medium-wood;
+}
+
+.catalog .swiper-pagination-bullet {
+  height: 0;
+  width: 13px;
+  font-weight: 500;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.catalog .swiper-horizontal > .swiper-pagination-bullets {
+  bottom: -75px;
+}
+
+@media (max-width: $tablet-width) {
+  .catalog {
+    padding: 69px 0 92px 0;
+  }
+
+  .catalog .section-title {
+    margin-bottom: 19px;
+    letter-spacing: 1px;
+  }
+
+  .catalog .site-link {
+    line-height: 22px;
+  }
+
+  .catalog .swiper {
+    margin-top: 49px;
+  }
+
+  .catalog .swiper-horizontal > .swiper-pagination-bullets {
+    bottom: -66px;
+  }
+
+  .catalog .swiper-pagination-bullet {
+    width: 15px;
+  }
+
+  .catalog .swiper-button-prev,
+  .catalog .swiper-button-next {
+    width: 36px;
+    height: 15px;
+    top: -74px;
+  }
+
+  .catalog .swiper-button-next::after,
+  .catalog .swiper-button-prev::after {
+    font-size: 17px;
+  }
+
+  .catalog .swiper-button-next::before,
+  .catalog .swiper-button-prev::before {
+    width: 36px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .catalog {
+    padding: 50px 0 77px 0;
+  }
+
+  .catalog .section-title {
+    letter-spacing: 0;
+  }
+
+  .catalog .swiper {
+    margin-top: 39px;
+  }
+
+  .catalog .swiper-horizontal > .swiper-pagination-bullets {
+    bottom: -56px;
+  }
+
+  .catalog .swiper-pagination-fraction {
+    bottom: -55px;
+  }
+
+  .catalog .swiper-pagination-current,
+  .catalog .swiper-pagination-total {
+    display: inline-block;
+    width: 18px;
+  }
+}

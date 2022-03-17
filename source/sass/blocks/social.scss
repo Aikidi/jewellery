@@ -1,0 +1,41 @@
+.social__link {
+  position: relative;
+  padding-left: 31px;
+}
+
+.social__link-icon {
+  position: absolute;
+  display: block;
+  width: 15px;
+  left: 0;
+  text-align: center;
+}
+
+
+@media (max-width: $mobile-width) {
+  .social {
+    display: flex;
+  }
+
+  .social__item:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  .social .social__link {
+    height: 20px;
+    font-size: 0;
+    padding: 0;
+  }
+
+  .social__link-icon {
+    position: initial;
+    width: auto;
+    height: 20px;
+    text-align: left;
+  }
+
+  .social__link-icon svg {
+    height: 20px;
+    width: auto;
+  }
+}

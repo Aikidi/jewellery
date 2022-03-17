@@ -1,0 +1,132 @@
+.swiper {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.swiper-grid > .swiper-wrapper {
+  flex-wrap: wrap;
+}
+
+.swiper-grid-column > .swiper-wrapper {
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  height: calc((100% - 30px) / 2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper--grid .swiper-wrapper {
+  height: unset;
+}
+
+.swiper.swiper--grid {
+  padding-bottom: 165px;
+}
+
+.swiper--grid .catalog-list__item {
+  margin-bottom: 5px;
+}
+
+.swiper--grid .product__title {
+  padding-left: 7px;
+}
+
+.swiper--grid .swiper-pagination-bullet {
+  height: 0;
+  width: 13px;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.swiper--grid .swiper-button-next,
+.swiper--grid .swiper-button-prev {
+  top: initial;
+  bottom: 64px;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+  color: $wood-bark;
+  z-index: 11;
+}
+
+.swiper--grid .swiper-button-prev {
+  left: 20px;
+}
+
+.swiper--grid .swiper-button-next {
+  right: 5px;
+}
+
+.swiper--grid .swiper-button-next::after,
+.swiper--grid .swiper-button-prev::after {
+  display: none;
+}
+
+.swiper--grid.swiper-horizontal > .swiper-pagination-bullets {
+  bottom: 72px;
+}
+
+@media (max-width: $tablet-width) {
+  .swiper.swiper--grid {
+    padding-bottom: 163px;
+  }
+
+  .swiper--grid .product__title {
+    padding-left: 0;
+  }
+
+  .swiper--grid .product__img {
+    margin-bottom: 15.5px;
+  }
+
+  .swiper--grid .swiper-pagination-bullet {
+    width: 14px;
+  }
+
+  .swiper--grid.swiper-horizontal > .swiper-pagination-bullets {
+    bottom: 73px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .swiper.swiper--grid {
+    padding-bottom: 132px;
+  }
+
+  .swiper--grid .product__img {
+    margin-bottom: 9px;
+  }
+
+  .swiper--grid .swiper-button-next,
+  .swiper--grid .swiper-button-prev {
+    display: none;
+  }
+
+  .swiper--grid.swiper-horizontal > .swiper-pagination-bullets {
+    bottom: 63px;
+  }
+
+  .swiper--grid .swiper-pagination-bullet {
+    width: 24px;
+  }
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+.swiper-pagination-bullet {
+  &:hover {
+    opacity: 0.6;
+  }
+}

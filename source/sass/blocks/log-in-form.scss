@@ -1,0 +1,146 @@
+.log-in-form {
+  padding: 50px 45px 40px 45px;
+  background-color: $desert-storm;
+}
+
+.log-in-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.log-in-form__field {
+  margin-bottom: 27px;
+}
+
+.log-in-form__field:last-of-type {
+  margin-bottom: 45px;
+}
+
+.log-in-form__field input {
+  width: 100%;
+  padding: 8px 0;
+  font-family: "Poppins", "Arial", serif;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 500;
+  color: $zorba;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid $wood-bark;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:focus {
+    opacity: 0.6;
+  }
+}
+
+.log-in-form__field--password input {
+  margin-bottom: 5px;
+}
+
+.log-in-form__field--password a {
+  display: block;
+  font-family: "Poppins", "Arial", serif;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 500;
+  text-align: right;
+  color: $zorba;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.log-in-form .section-title {
+  letter-spacing: 0;
+  margin-bottom: 25px;
+}
+
+.log-in-form button {
+  min-height: 68px;
+  margin-bottom: 15px;
+  background-color: $medium-wood;
+  font-family: "Poppins", "Arial", serif;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+  color: $white;
+  border: none;
+  outline: none;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:focus {
+    opacity: 0.6;
+  }
+}
+
+.log-in-form__sign-up {
+  margin-top: 0;
+  padding-right: 4px;
+  text-align: center;
+  font-family: "Poppins", "Arial", serif;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 500;
+  color: $zorba;
+}
+
+.log-in-form__sign-up-link {
+  color: $wood-bark;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:focus {
+    opacity: 0.6;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .log-in-form {
+    padding: 50px 51px 40px;
+  }
+
+  .log-in-form .section-title {
+    letter-spacing: 1px;
+  }
+
+  .log-in-form__sign-up {
+    padding-right: 0;
+  }
+}
+
+
+@media (max-width: $mobile-width) {
+  .log-in-form .section-title {
+    margin-bottom: 19px;
+    font-size: 24px;
+    line-height: 31px;
+    letter-spacing: 0;
+  }
+
+  .log-in-form {
+    padding: 37px 15px 40px;
+  }
+
+  .log-in-form__field {
+    margin-bottom: 22px;
+  }
+
+  .log-in-form__field:last-of-type {
+    margin-bottom: 35px;
+  }
+}

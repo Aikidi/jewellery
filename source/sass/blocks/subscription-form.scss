@@ -1,0 +1,104 @@
+.subscription-form__title {
+  margin-bottom: 10px;
+  color: $white;
+  text-align: left;
+  letter-spacing: 0.8px;
+}
+
+.subscription-form__text {
+  margin-top: 0;
+  margin-bottom: 35px;
+  font-family: "Poppins", "Arial", serif;
+  font-size: 16px;
+  line-height: 21px;
+  color: $zorba;
+}
+
+.subscription-form form {
+  position: relative;
+}
+
+.subscription-form button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 10px 42px 10px 6px;
+  color: $white;
+  background-color: transparent;
+  font-family: "Poppins", "Arial", serif;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+  border: none;
+
+  &::before {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    content: "";
+    width: 29px;
+    height: 1px;
+    background-color: $white;
+  }
+
+  &::after {
+    position: absolute;
+    right: 0;
+    top: calc(50% - 4px);
+    transform: rotate(-45deg);
+    content: "";
+    width: 9px;
+    height: 9px;
+    border-bottom: 1px solid $white;
+    border-right: 1px solid $white;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:focus {
+    opacity: 1;
+  }
+}
+
+.subscription-form input {
+  display: block;
+  width: 100%;
+  padding: 8px 110px 8px 0;
+  font-family: "Poppins", "Arial", serif;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 500;
+  color: $zorba;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid $white;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:focus {
+    opacity: 1;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .subscription-form__title {
+    letter-spacing: 1.6px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .subscription-form__title {
+    max-width: 240px;
+    margin-bottom: 13px;
+    letter-spacing: 1px;
+  }
+
+  .subscription-form__text {
+    max-width: 240px;
+  }
+}

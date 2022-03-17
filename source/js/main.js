@@ -136,15 +136,12 @@ if (document.querySelector('.swiper--main')) {
       type: 'custom',
       clickable: true,
       renderCustom: function (swiper, index, total) {
-        let text = '';
-        if (window.matchMedia('(min-width: 0px) and (max-width: 767px)').matches) {
-          text = '<span class="swiper-pagination-current"> ' + index + ' </span>' + ' of ' + '<span class="swiper-pagination-total"> ' + total + ' </span>';
-        } else {
-          for (let i = 1; i <= total; i++) {
-            text += '<span class="swiper-pagination-bullet ' + (i !== index ? '' : 'swiper-pagination-bullet-active') + '">' + i + '</span>';
-          }
-        }
-        return text;
+        return (window.matchMedia('(min-width: 0px) and (max-width: 767px)').matches) ?
+          '<span class="swiper-pagination-current"> ' + index + ' </span>' + ' of ' + '<span class="swiper-pagination-total"> ' + total + ' </span>'
+          :
+          Array(total).fill(0).reduce((txt, i, k) => {
+            return txt + '<span class="swiper-pagination-bullet ' + ((k + 1) !== index ? '' : 'swiper-pagination-bullet-active') + '">' + (k + 1) + '</span>';
+          }, '');
       },
     },
 

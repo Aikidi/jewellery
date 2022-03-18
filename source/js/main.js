@@ -139,7 +139,7 @@ if (document.querySelector('.swiper--main')) {
       el: '.swiper-pagination',
       type: 'custom',
       clickable: true,
-      renderCustom: function (swiper, index, total) {
+      renderCustom(swiper, index, total) {
         return (window.matchMedia('(min-width: 0px) and (max-width: 767px)').matches) ?
           '<span class="swiper-pagination-current"> ' + index + ' </span>' + ' of ' + '<span class="swiper-pagination-total"> ' + total + ' </span>'
           :
@@ -155,10 +155,10 @@ if (document.querySelector('.swiper--main')) {
     },
 
     on: {
-      init: function () {
+      init() {
         localStorage.setItem('ScreenTypeIsMobile', Number(window.matchMedia('(min-width: 0px) and (max-width: 768px)').matches).toString());
       },
-      beforeResize: function () {
+      beforeResize() {
         if (Number(localStorage.getItem('ScreenTypeIsMobile')) !== Number(window.matchMedia('(min-width: 0px) and (max-width: 767px)').matches)) {
           localStorage.setItem('ScreenTypeIsMobile', Number(window.matchMedia('(min-width: 0px) and (max-width: 768px)').matches).toString());
           this.pagination.update();
@@ -203,7 +203,7 @@ if (document.querySelector('.swiper--grid')) {
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
-      renderBullet: function (index, className) {
+      renderBullet(index, className) {
         return '<span class="' + className + '">' + (index + 1) + '</span>';
       },
     },

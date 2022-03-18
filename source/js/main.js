@@ -1,5 +1,9 @@
 'use strict';
 
+/**
+ * @requires ../../node_modules/swiper/swiper-bundle.min.js
+ */
+
 const pageBody = document.querySelector('body');
 const accordionItems = document.querySelectorAll('.accordion__item');
 const accordionItemsTitles = document.querySelectorAll('.accordion__item-title');
@@ -125,7 +129,7 @@ document.addEventListener('keydown', (evt) => {
 });
 
 if (document.querySelector('.swiper--main')) {
-  const swiperMain = new Swiper('.swiper--main', {
+  const swiperMain = new window.Swiper('.swiper--main', {
     direction: 'horizontal',
     loop: true,
     spaceBetween: 30,
@@ -187,7 +191,7 @@ if (document.querySelector('.swiper--grid')) {
     filterToogle.classList.toggle('filter__toogle--opened');
   });
 
-  const swiperGrid = new Swiper('.swiper--grid', {
+  const swiperGrid = new window.Swiper('.swiper--grid', {
     spaceBetween: 30,
     slidesPerGroup: 2,
     slidesPerView: 2,

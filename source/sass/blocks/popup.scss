@@ -10,12 +10,12 @@
   min-height: 586px;
   padding-top: 138px;
   background-color: $desert-storm;
-  background-image: url("../../img/popup-bkg@1x.jpg");
+  background-image: url("../img/popup-bkg@1x.jpg");
   background-repeat: no-repeat;
   background-size: 100% auto;
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../../img/popup-bkg@2x.jpg");
+    background-image: url("../img/popup-bkg@2x.jpg");
   }
 
   &--open {
@@ -33,9 +33,9 @@
 .popup__close-button {
   position: absolute;
   top: 19px;
-  right: 22px;
-  width: 14px;
-  height: 14px;
+  right: 18px;
+  width: 18px;
+  height: 18px;
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -44,6 +44,7 @@
   &::after {
     position: absolute;
     left: 0;
+    top: calc(50% - 1px);
     content: "";
     width: 18px;
     height: 2px;
@@ -80,8 +81,9 @@
   }
 
   .popup__close-button {
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 24px;
+    top: 17px;
 
     &::before,
     &::after {
@@ -99,10 +101,11 @@
   }
 
   .popup__close-button {
-    top: 14px;
-    right: 17px;
-    width: 14px;
-    height: 14px;
+    top: 13px;
+    right: 13px;
+    width: 18px;
+    height: 18px;
+    padding: 0;
 
     &::before,
     &::after {

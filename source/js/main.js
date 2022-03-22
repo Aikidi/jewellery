@@ -6,7 +6,6 @@
 
 const pageBody = document.querySelector('body');
 const accordionItems = document.querySelectorAll('.accordion__item');
-const accordionItemsTitles = document.querySelectorAll('.accordion__item-title');
 
 const siteNavToggle = document.querySelector('.site-nav__toggle');
 const siteNav = document.querySelector('.site-nav');
@@ -50,11 +49,37 @@ const accordionItemClick = (accordionItemindex) => {
   accordionItems[accordionItemindex].classList.toggle('accordion__item--closed');
 };
 
-accordionItemsTitles.forEach((itemTitle, index) => {
-  itemTitle.addEventListener('click', () => {
+const isAccordion = (testOdj) => {
+  let isTargerAccordion = false;
+  accordionItems.forEach((item) => {
+    if (Object.is(item, testOdj)) {
+      isTargerAccordion = true;
+    }
+  });
+  return isTargerAccordion;
+};
+
+accordionItems.forEach((item, index) => {
+  item.addEventListener('click', () => {
     accordionItemClick(index);
   });
+  item.addEventListener('keydown', (evt) => {
+    if (evt.code === 'Enter' && isAccordion(evt.target)) {
+      evt.target.click();
+    }
+  });
 });
+
+if (document.querySelector('.filter__accordion')) {
+  const checkboxLabels = document.querySelector('.filter__accordion').querySelectorAll('label');
+  checkboxLabels.forEach((item) => {
+    item.addEventListener('keydown', (evt) => {
+      if (evt.code === 'Enter') {
+        evt.target.click();
+      }
+    });
+  });
+}
 
 closeAllItems();
 

@@ -49,14 +49,15 @@
 
 @media (max-width: $tablet-width) {
   .product__img {
-    max-height: 340px;
     margin-bottom: 22px;
+    height: calc((100vw - 90px - 30px) / 100 * 104.94 / 2);
   }
 }
 
 @media (max-width: $mobile-width) {
   .product__img {
     margin-bottom: 9px;
+    height: initial;
   }
 
   a.product {

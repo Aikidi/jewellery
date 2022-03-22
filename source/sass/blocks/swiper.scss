@@ -83,7 +83,8 @@
   }
 
   .swiper--grid .product__img {
-    margin-bottom: 15.5px;
+    margin-bottom: 22px;
+    height: calc((100vw - 90px - 60px) / 100 * 100.97 / 3);
   }
 
   .swiper--grid .swiper-pagination-bullet {
@@ -102,6 +103,7 @@
 
   .swiper--grid .product__img {
     margin-bottom: 9px;
+    height: initial;
   }
 
   .swiper--grid .swiper-button-next,

@@ -57,6 +57,13 @@
     z-index: 2;
     width: 100%;
     height: 100vh;
+    overflow: scroll;
+  }
+
+  .site-nav--opened.page-header__top .content-wrapper {
+    grid-template-rows: auto;
+    grid-gap: 0;
+    padding-bottom: 123px;
   }
 
   .site-nav--opened .user-nav__item--login {
@@ -100,6 +107,10 @@
 }
 
 @media (max-width: $mobile-width) {
+  .site-nav--opened.page-header__top .content-wrapper {
+    padding-bottom: 83px;
+  }
+
   .site-nav__toggle {
     top: 37px;
     left: 15px;

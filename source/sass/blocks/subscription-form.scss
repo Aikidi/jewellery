@@ -30,6 +30,7 @@
   line-height: 21px;
   font-weight: 500;
   border: none;
+  cursor: pointer;
 
   &::before {
     position: absolute;
@@ -70,7 +71,7 @@
   font-size: 14px;
   line-height: 21px;
   font-weight: 500;
-  color: $zorba;
+  color: $white;
   background-color: transparent;
   outline: none;
   border: none;
